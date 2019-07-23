@@ -15,6 +15,7 @@ class Player
   #Permet de recevoir des dommages
   def gets_damage(damages)
     @life_points -= damages
+    @life_points = 0 if @life_points < 0
     puts "le joueur #{@name} a été tué !" if @life_points <= 0   
   end
 
