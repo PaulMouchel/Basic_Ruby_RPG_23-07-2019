@@ -6,9 +6,6 @@ class Game
     @players_left = 10
     @enemies_in_sight  = []
     @human_player = HumanPlayer.new(name)
-    # 4.times do |index|
-    #   @enemies << Player.new("ennemi_#{index}")
-    # end
   end
 
   #Tue un joueur en le supprimant du tableau d'ennemis
@@ -22,7 +19,7 @@ class Game
     return @human_player.life_points > 0 && @players_left > 0
   end
 
-  #Affiche le statue du héros et le nombre d'ennemis restants
+  #Affiche le status du héros et le nombre d'ennemis restants
   def show_players
     puts "-------------------------------------------------------------------------------"
     @human_player.show_state
